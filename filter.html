@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://fom.in.ua/echo" method="GET">
+        Choose parameters
+
+        <label for="bodyType">
+            Car body type:
+        <select name="bodyType" id="bodyType">
+            <option value="all">All</option>
+            <option value="sedan">Sedan</option>
+            <option value="coupe">Coupe</option>
+            <option value="sportCar">Sport Car</option>
+            <option value="hatchback">Hatchback</option>
+            <option value="minivan">Minivan</option>
+            <option value="convertible">Convertible</option>
+            <option value="pickupTruck">Pickup Truck</option>
+            </select>
+        </label>
+
+        <label>
+            Brand: 
+        </label>
+        <label><input type="checkbox" name="brand[]" value="tesla">Tesla</label>
+        <label><input type="checkbox" name="brand[]" value="bmw">BMW</label>
+        <label><input type="checkbox" name="brand[]" value="ferrari">Ferrari</label>
+        <label><input type="checkbox" name="brand[]" value="ford">Ford</label>
+        <label><input type="checkbox" name="brand[]" value="porsche">Porsche</label>
+        <label><input type="checkbox" name="brand[]" value="toyota">Toyota</label>
+        <label><input type="checkbox" name="brand[]" value="subaru">Subaru</label>
+        <label><input type="checkbox" name="brand[]" value="mazda">Mazda</label>
+        <label><input type="checkbox" name="brand[]" value="hyundai">Hyundai</label>
+
+        <label>
+            Car production by country: 
+        </label>
+        <label><input type="checkbox" name="country[]" value="china">China</label>
+        <label><input type="checkbox" name="country[]" value="us">United States</label>
+        <label><input type="checkbox" name="country[]" value="japan">Japan</label>
+        <label><input type="checkbox" name="country[]" value="germany">Germany</label>
+        <label><input type="checkbox" name="country[]" value="southKorea">South Korea</label>
+        <label><input type="checkbox" name="country[]" value="india">India</label>
+        <label><input type="checkbox" name="country[]" value="portugal">Portugal</label>
+        <label><input type="checkbox" name="country[]" value="spain">Spain</label>
+
+        <label for="price">
+            Price: 
+        </label>
+        <input type="range" list="tickmarksPrice" name="price" id="price" min="3000" max="300000">
+        <datalist id="tickmarksPrice">
+            <option value="15000"></option>
+            <option value="30000"></option>
+            <option value="50000"></option>
+            <option value="100000"></option>
+            <option value="150000"></option>
+            <option value="200000"></option>
+            <option value="250000"></option>
+        </datalist>
+
+        <label for="yearOfIssue">
+            Year of issue: 
+        </label>
+        <input type="range" list="tickmarksYear" name="year" id="yearOfIssue" min="2000" max="2022">
+        <datalist id="tickmarksYear">
+            <option value="2005"></option>
+            <option value="2010"></option>
+            <option value="2015"></option>
+            <option value="2020"></option>
+        </datalist>
+
+        <label>
+            Condition: 
+        </label>
+            <label><input type="checkbox" name="condition[]" value="new">New</label>
+            <label><input type="checkbox" name="condition[]" value="used">Used</label>
+            <label><input type="checkbox" name="condition[]" value="dented">Dented</label>
+            <label><input type="checkbox" name="condition[]" value="loan">Loan</label>
+            <label><input type="checkbox" name="condition[]" value="notCleared">Not cleared</label>
+        
+        <label for="fuel">
+            Fuel: 
+        </label>
+        <select id="fuel" name="fuelType">
+            <option value="gasoline">Gasoline</option>
+            <option value="solid">Solid</option>
+            <option value="liquid">Liquid</option>
+            <option value="hybrid">Hybrid</option>
+        </select>
+
+        <label for="gearbox">
+            Gearbox type: 
+        </label>
+        <select id="gearbox" name="gearboxType">
+            <option value="manual">Manual</option>
+            <option value="automatic">Automatic</option>
+            <option value="cvtTransmissions">CVT Transmissions</option>
+        </select>
+
+        <label for="color">
+            Color: 
+            <input type="color" id="color" name="color">
+        </label>
+
+        <label>
+            Comfort options: 
+        </label>
+        <label><input type="checkbox" name="comfortOption[]" value="onBoardComputer">On-board computer</label>
+        <label><input type="checkbox" name="comfortOption[]" value="airConditioner">Air conditioner</label>
+        <label><input type="checkbox" name="comfortOption[]" value="sunfoor">Sunroof</label>
+        <label><input type="checkbox" name="comfortOption[]" value="leather">Leather</label>
+        <label><input type="checkbox" name="comfortOption[]" value="heatedSteering">Heated steering</label>
+        <label><input type="checkbox" name="comfortOption[]" value="climateControl">Climate control</label>
+        <label><input type="checkbox" name="comfortOption[]" value="cruiseControl">Cruise control</label>
+        <label><input type="checkbox" name="comfortOption[]" value="heatedSeats">Heated seats</label>
+        <label><input type="checkbox" name="comfortOption[]" value="raindropSensor">Raindrop sensor</label>
+
+        <button type="submit">Choose</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
